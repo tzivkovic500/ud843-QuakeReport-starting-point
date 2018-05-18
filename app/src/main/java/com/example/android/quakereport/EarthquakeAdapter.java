@@ -18,7 +18,15 @@ import java.util.List;
  * Created by Tea on 4.5.2018..
  */
 
+/**
+ * An {@link EarthquakeAdapter} knows how to create a list item layout for each earthquake
+ * in the data source (a list of {@link Earthquake} objects).
+ *
+ * These list item layouts will be provided to an adapter view like ListView
+ * to be displayed to the user.
+ */
 public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
+
     /**
      * The part of the location string from the USGS service that we use to determine
      * whether or not there is a location offset present ("5km N of Cairo, Egypt").
@@ -196,5 +204,4 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         SimpleDateFormat timeFormat = new SimpleDateFormat("h:mm a");
         return timeFormat.format(dateObject);
     }
-
 }
